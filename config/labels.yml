@@ -1,0 +1,48 @@
+
+wsdl_uri: "https://www3.bcb.gov.br/sgspub/JSP/sgsgeral/FachadaWSSGS.wsdl"
+
+labels:
+
+  # Miscellany
+  bovespa:           7
+  poupanca:         25
+  pib:            4380
+  inpc:            188
+  igpm:            189
+  ipca:            433
+  selic:          4189
+  selic_diaria:     11
+  meta_selic:      432
+  importacoes:    3034
+  exportacoes:    2946
+  salario_minimo: 1619
+  ouro:              4
+
+  # Currency
+  dolar:                         1
+  dolar_venda:                   1
+  dolar_compra:              10813
+  euro:                      21619
+  euro_venda:                21619
+  euro_compra:               21620
+  iene:                      21621
+  iene_venda:                21621
+  iene_compra:               21622
+  libra:                     21623
+  libra_venda:               21623
+  libra_compra:              21624
+  franco_suico:              21625
+  franco_suico_venda:        21625
+  franco_suico_compra:       21626
+  coroa_dinamarquesa:        21627
+  coroa_dinamarquesa_venda:  21627
+  coroa_dinamarquesa_compra: 21628
+  coroa_norueguesa:          21629
+  coroa_norueguesa_venda:    21629
+  coroa_norueguesa_compra:   21630
+  dolar_australiano:         21633
+  dolar_australiano_venda:   21633
+  dolar_australiano_compra:  21634
+  dolar_canadense:           21635
+  dolar_canadense_venda:     21635
+  dolar_canadense_compra:    21636
