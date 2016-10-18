@@ -2,11 +2,12 @@ require "banco_central/version"
 require "savon"
 require "yaml"
 
+# BancoCentral.last(:ipca)
 # BancoCentral.all(:ipca)
 # BancoCentral.all(:ipca, start: "1/7/2014")
 # BancoCentral.all(:ipca, finish: "1/8/2014")
 # BancoCentral.all(:ipca, start: "1/7/2014", finish: "1/8/2014")
-# BancoCentral.all([:importacao, :exportacao])
+# BancoCentral.all([:importacoes, :exportacoes])
 # BancoCentral.find(:dolar, date: "3/7/2014")
 # BancoCentral::LABELS
 module BancoCentral
