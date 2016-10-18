@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Henrique G. Testa"]
   spec.email         = ["hgtesta@gmail.com"]
 
-  spec.summary       = %q{Utility to consume Banco Central Webservice}
-  spec.description   = %q{Write a longer description or delete this line.}
+  spec.summary       = %q{Fetch social and economic indicators from Central Bank of Brazil (Banco Central do Brasil).}
+  spec.description   = %q{Fetch social and economic indicators from Central Bank of Brazil (Banco Central do Brasil).}
   spec.homepage      = "http://github.com/hgtesta/banco_central"
   spec.license       = "MIT"
 
