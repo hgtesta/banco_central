@@ -1,6 +1,10 @@
 # BancoCentral
 
-A handy Ruby library to consume Central Bank of Brazil (Banco Central do Brasil) WebService. The WebService provided by the BC has lots of updated economic indicators, but it fails short in documentation.
+A simple gem library to fetch social and economic indicators from the Central Bank of Brazil (Banco Central do Brasil) WebService. It fires a SOAP request behind the scenes and parse the result for easy use.
+
+The WebService provided by the BC has lots of updated social and economic indicators, but unfortunately it lacks documentation. You can learn more on the site below.
+
+[https://www3.bcb.gov.br/sgspub/]
 
 ## Installation
 
@@ -35,7 +39,9 @@ Note that `:dolar` is a convenient label that is translated to a number before t
 BancoCentral.last(1)
 ```
 
-Check `BancoCentral::Labels` for a list of available labels, or take a look at the config/labels.yml file.
+Check `BancoCentral::Labels` for a list of available labels, or take a look at the config/labels.yml file. A list of all indicators is available here:
+
+http://hique.org/indicators.txt
 
 ### find
 
