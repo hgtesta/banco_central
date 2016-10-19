@@ -4,7 +4,7 @@ A simple gem library to fetch social and economic indicators from the Central Ba
 
 The WebService provided by the BC has lots of updated social and economic indicators, but unfortunately it lacks documentation. You can learn more on the site below.
 
-[https://www3.bcb.gov.br/sgspub/]
+https://www3.bcb.gov.br/sgspub/
 
 ## Installation
 
@@ -30,7 +30,14 @@ Get the last value of the an indicator, and also the name, unit, date and period
 
 ```ruby
 BancoCentral.last(:dolar)
-# => {:id=>1, :name=>"Taxa de câmbio - Livre - Dólar americano (venda) - diário", :unit=>"u.m.c./US$", :date=>2016-10-18 00:00:00 -0200, :value=>3.1874, :periodicity=>:daily}
+# => {
+#  :id=>1, 
+#  :name=>"Taxa de câmbio - Livre - Dólar americano (venda) - diário",
+#  :unit=>"u.m.c./US$",
+#  :date=>2016-10-18 00:00:00 -0200,
+#  :value=>3.1874,
+#  :periodicity=>:daily
+# }
 ```
 
 Note that `:dolar` is a convenient label that is translated to a number before the WebService call. There are thousands of indicators, some deprecated, but just a few dozen labels. The code below is the equivalent of the above one.
@@ -39,9 +46,7 @@ Note that `:dolar` is a convenient label that is translated to a number before t
 BancoCentral.last(1)
 ```
 
-Check `BancoCentral::Labels` for a list of available labels, or take a look at the config/labels.yml file. A list of all indicators is available here:
-
-http://hique.org/indicators.txt
+Check `BancoCentral::Labels` for a list of available labels, or take a look at the config/labels.yml file. A list of all indicators is available at http://hique.org/indicators.txt
 
 ### find
 
