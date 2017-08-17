@@ -30,25 +30,37 @@ class BancoCentralTest < ActiveSupport::TestCase
     refute_nil ::BancoCentral::VERSION
   end
 
-  test "get_id returns the id of the label" do
-    out = BancoCentral.send(:get_id, :dolar)
+  test "label_to_int returns the id of the label" do
+    out = BancoCentral.send(:label_to_int, :ipca)
     assert out, 1
   end
 
-  test "get_id raise exception if label doesn't exist" do
+  test "label_to_int raise exception if label doesn't exist" do
     assert_raises ArgumentError do
-      BancoCentral.send(:get_id, :diamond)
+      BancoCentral.send(:label_to_int, :diamond)
     end
   end
 
-  test "get_id returns identical arg if it is not a symbol" do
-    out = BancoCentral.send(:get_id, 433)
+  test "label_to_int returns identical arg if it is not a symbol" do
+    out = BancoCentral.send(:label_to_int, 433)
     assert out, 433
   end
 
   test "client returns a Savon client object" do
     out = BancoCentral.send(:client)
     assert_instance_of Savon::Client, out
+  end
+
+  test "last_as_xml returns the correct XML" do
+    xml = BancoCentral.send(:last_as_xml, :ipca)
+    assert xml.include?("Processado com sucesso")
+    assert xml.include?("VALOR")
+  end
+
+  test "all_as_xml reutrns the correct XML" do
+    xml = BancoCentral.send(:all_as_xml, :ipca, "1/1/2000", "1/1/2001")
+    assert xml.include?("SERIES")
+    assert xml.include?("VALOR")
   end
 
   test "find returns a Numeric" do
