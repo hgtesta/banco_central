@@ -85,14 +85,14 @@ The indicators must have the same periodicity.
 
 ### Logging
 
-To specify the log level use the `:log_level` option. Valid values are `:fatal`, `:error`, `:warn`, `:info`, `:debug`. In practice, it will affect the output of Savon calls.
+To specify the log level set the `log_level` attribute. Valid values are `:fatal`, `:error`, `:warn`, `:info`, `:debug`. In practice, it will affect the output of Savon calls.
 ```ruby
-BancoCentral.all(:ipca, log_level: :debug)
+BancoCentral.log_level = :debug
 ```
 
-The default logger is STDOUT. To use a different one just use the `:logger` option.
-```ruby
-BancoCentral.all(:ipca, log_level: :debug, logger: @logger)
+The default logger is STDOUT. To use a different one just set the `:logger` attribute.
+```
+BancoCentral.logger = @logger
 ```
 
 
