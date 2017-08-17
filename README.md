@@ -91,7 +91,7 @@ BancoCentral.log_level = :debug
 ```
 
 The default logger is STDOUT. To use a different one just set the `:logger` attribute.
-```
+```ruby
 BancoCentral.logger = @logger
 ```
 
